@@ -1,0 +1,23 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+*.pyc
+
+# Environment secrets
+.env
+backend/.env
+frontend/.env
+
+# Node
+frontend/node_modules/
+node_modules/
+
+# Local data/artifacts
+backend/data/
+data/
+
+# OS junk
+.DS_Store
+Thumbs.db
