@@ -1,0 +1,84 @@
+{
+  "query": "What are the key requirements mentioned in the uploaded document for structural load calculations?",
+  "selected_pipeline": "citations_strict",
+  "answer": "According to the document, structural load calculations must account for three primary factors: (1) dead loads from permanent structural elements, estimated at 4.5 kN/m², (2) live loads from occupancy, rated at 2.0 kN/m² for office use, and (3) wind loads calculated per IS 875 Part 3 standards. The document explicitly states that a safety factor of 1.5 must be applied to all load combinations.",
+  "pipelines_evaluated": [
+    {
+      "pipeline": "strict",
+      "answer_summary": "Structural loads include dead, live, and wind components with safety factor 1.5.",
+      "judge_scores": {
+        "quality": 0.74,
+        "groundedness": 0.81,
+        "structure": 0.70
+      },
+      "cost_usd": 0.0008,
+      "latency_ms": 412,
+      "optimizer_score": 0.61,
+      "rejected": false
+    },
+    {
+      "pipeline": "citations_strict",
+      "answer_summary": "Cited breakdown of dead (4.5 kN/m²), live (2.0 kN/m²), wind (IS 875 Part 3), safety factor 1.5.",
+      "judge_scores": {
+        "quality": 0.91,
+        "groundedness": 0.94,
+        "structure": 0.88
+      },
+      "cost_usd": 0.0014,
+      "latency_ms": 638,
+      "optimizer_score": 0.77,
+      "rejected": false
+    },
+    {
+      "pipeline": "explanatory",
+      "answer_summary": "Detailed explanation of load types with context on why safety factors matter in structural design.",
+      "judge_scores": {
+        "quality": 0.86,
+        "groundedness": 0.72,
+        "structure": 0.91
+      },
+      "cost_usd": 0.0021,
+      "latency_ms": 890,
+      "optimizer_score": 0.59,
+      "rejected": false
+    }
+  ],
+  "optimizer_weights": {
+    "quality": 0.6,
+    "cost": 0.2,
+    "latency": 0.2
+  },
+  "guardrails": {
+    "similarity_threshold": 0.75,
+    "min_groundedness_score": 0.6,
+    "token_budget": 2000,
+    "hallucination_rejected": false
+  },
+  "metrics": {
+    "prompt_tokens": 1847,
+    "completion_tokens": 312,
+    "total_tokens": 2159,
+    "total_cost_usd": 0.0043,
+    "total_latency_ms": 1940
+  },
+  "top_chunks_retrieved": [
+    {
+      "chunk_id": "chunk_014",
+      "similarity_score": 0.91,
+      "source_page": 7,
+      "preview": "Dead loads shall be calculated based on unit weights of materials as per IS 875 Part 1..."
+    },
+    {
+      "chunk_id": "chunk_021",
+      "similarity_score": 0.87,
+      "source_page": 9,
+      "preview": "Live loads for office occupancy are standardised at 2.0 kN/m² in accordance with..."
+    },
+    {
+      "chunk_id": "chunk_033",
+      "similarity_score": 0.83,
+      "source_page": 12,
+      "preview": "A load combination safety factor of 1.5 must be applied when computing ultimate..."
+    }
+  ]
+}
