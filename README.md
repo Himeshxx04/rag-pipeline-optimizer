@@ -163,14 +163,16 @@ See `.env.example` for the full list.
 
 ## Roadmap
 
+- [x] Multi-pipeline generation (strict, citation, explanatory)
+- [x] LLM judge evaluation layer
+- [x] Cost + latency optimizer
+- [x] Hallucination auto-rejection guardrail
+- [x] Full observability — token, cost, latency logging
 - [ ] Docker + docker-compose for one-command setup
-- [ ] Cloud storage abstraction (S3 / GCS) for PDF uploads
-- [ ] Multi-worker shared FAISS index
 - [ ] Streaming responses via SSE
+- [ ] Swap FAISS for Qdrant for horizontal scaling
 - [ ] CI/CD pipeline
-- [ ] Horizontal scaling support
-
----
+- [ ] Cloud storage abstraction (S3/GCS) for PDF uploads
 
 ## Contributing
 
@@ -180,5 +182,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions and open contribut
 
 ## Author
 
-**Himesh Pandey** — Final year ECE @ PES University, Bangalore (2026)  
+**Himesh Pandey** — Final year BTECH @ PES University, Bangalore (2026)  
 [LinkedIn](https://www.linkedin.com/in/himesh-pandey-66968a213/) · [GitHub](https://github.com/Himeshxx04) · pandeyhimesh09@gmail.com
